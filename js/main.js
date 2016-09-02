@@ -1,6 +1,5 @@
 $(function (){
 
-
   //flickity slider
 
   $('.main-carousel').flickity({
@@ -14,22 +13,36 @@ $(function (){
   });
 
   // A function to check for an email address in the format
-  $('form').on('submit', function(event){
 
-      event.preventDefault();
+  $('form.sign-up-form').on('submit', function(event){
+    event.preventDefault();
+     var userEmail = $('input[type="email"]').val();
 
-      var userEmail = $('input[type="email"]').val();
-
-      if (userEmail) {
-        alert('Thank you for subscribing!');
-      } else {
-        alert('Please provide a valid email address');
-      }
+    if (userEmail) {
+      alert('Thank you for subscribing!');
+    } else {
+      alert('Please provide a valid email address!');
+    }
   });
+
+  //shopping cart function
+
+  //var numItems = 0;
+
+  // $('.product-wrap button').on('click', function (e) {
+  //     e.preventDefault();
+  //
+  //     numItems++;
+  //     $('.counter').text(numItems);
+  //     $('.counter').show();
+  //
+  //
+  // });
 
 
   // smooth scrolling function, taking into account the fixed header
-  // $target.offset().top - height of header
+
+  //$target.offset().top - height of header
 
   $('a[href^="#"]').on('click',function (e) {
 	    e.preventDefault();
@@ -43,19 +56,7 @@ $(function (){
         900, 'swing');
 	});
 
-  //shopping cart incrementing function
 
-  var numItems = 0;
-
-  $('.product-list button').on('click', function (e) {
-      e.preventDefault();
-
-      numItems++;
-      $('.counter').text(numItems);
-      $('.counter').show();
-
-
-  });
 
 
 });
