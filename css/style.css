@@ -60,6 +60,8 @@
   }
 
 /*-----------------------------------------*/
+
+/* Overall styling */
 html {
   background-color: white;
   font-size: 14px;
@@ -109,6 +111,7 @@ a:hover {
   color: #000;
 }
 
+
 /* This is for the Header  */
 
 header {
@@ -116,6 +119,7 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  z-index: 1;
 }
 
 .reader {
@@ -128,6 +132,15 @@ header {
   position: absolute;
   width: 1px;
 }
+
+.inner-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: .5rem;
+  padding-top: 1rem;
+}
+
 
 /* flex items of the header flex container are .logo, nav, .cart*/
 
@@ -272,11 +285,10 @@ h2 {
 }
 
 .category-wide{
-  position: relative;
+  position: absolute;
   flex: 0 1 100%;
   color: white;
   margin: 2%;
-  position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
@@ -458,9 +470,10 @@ section h2 {
 }
 
 .container {
-  padding: 0 2%;
+  /*padding: 0 2%;*/
   margin: 0 auto;
   width: 100%;
+  max-width: 1240px;
 }
 
 .reader-text:focus {
@@ -473,19 +486,32 @@ section h2 {
   z-index: 100000;
 }
 
+/* slide show */
 
+.product-wrap {
+  text-align: center;
 
+}
+
+.add-to-cart {
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #242424;
+  border-radius: 25px;
+  color: white;
+  font-size: .8rem;
+  line-height: 1;
+  margin-top: 1rem;
+  padding: .5rem 1rem;
+}
 
 /* Footer */
 
 .container1 {
-  /*display: flex;
-  flex-flow: row;
-  justify-content: space-between;*/
-  padding: 0 2%;
   margin: 0 auto;
   width: 100%;
 }
+
 .site-footer {
   background-color: #242424;
   color: white;
@@ -561,4 +587,16 @@ margin-bottom: 1rem;
   .outer-square {
     flex-basis: 25%;
   }
+  .container1 {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+  }
+  .product-wrap {
+
+  }
 }
+
+/*@@media screen and (min-width: 1240px) {
+
+}*/
