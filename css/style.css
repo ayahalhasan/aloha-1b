@@ -264,10 +264,6 @@ nav {
 
 /*--- This is for ther refer (about) ---*/
 
-h2 {
-  font-size: 2rem;
-}
-
 .refer {
   border-bottom: 1px solid #d7d7d7;
   text-align: center;
@@ -489,7 +485,7 @@ input[type="submit"]:hover, input[type="submit"]:focus {
 
 .news p {
   font-size: 1.15rem;
-  text-align: center;
+  /*text-align: center;*/
 }
 
 .sign-up-form {
@@ -543,6 +539,8 @@ section h2 {
 .container1 {
   margin: 0 auto;
   width: 100%;
+  /*text-align: left;
+  padding: 0 2rem;*/
 }
 
 .site-footer {
@@ -564,10 +562,6 @@ section h2 {
 .colophon {
   line-height: 1.5;
   /*flex-flow: column wrap;*/
-}
-
-.colophon {
-  line-height: 1;
 }
 
 .copyright1 {
@@ -669,7 +663,26 @@ footer ul{
     width: 720px;
   }
 
+  .colophon {
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .network-name {
+    display: inline;
+  }
+
+  .social li {
+    display: block;
+    text-align: left;
+  }
+  .social {
+    margin-top: 0;
+    padding-right: 2rem;
+  }
+
 }
+/* Media Query Desktop screen */
 @media screen and (min-width: 1240px) {
 
   header {
@@ -678,6 +691,7 @@ footer ul{
   }
 
   /* Header and nav */
+
   .header-wrap {
    display: flex;
    justify-content: center;
@@ -704,6 +718,7 @@ footer ul{
  .logo {
    order: 1;
    flex-basis: 20%;
+   max-width: 160px;
  }
 
  .main-navigate {
@@ -717,6 +732,7 @@ footer ul{
    position: relative;
    width: 48px;
  }
+
  .counter {
    top: 7px;
    right: 13px;
@@ -726,6 +742,8 @@ footer ul{
    flex-wrap: nowrap;
  }
 
+/* product */
+
  .product-wrap {
    width: 25%;
  }
@@ -734,7 +752,15 @@ footer ul{
    width: 720px;
  }
  .can {
-   width: 1240px;
+   width: 720px;
+ }
+
+ .clearfix {
+   max-width: 1240px;
+ }
+
+ .social {
+   padding-right: 4rem;
  }
 
 }

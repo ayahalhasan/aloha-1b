@@ -25,21 +25,6 @@ $(function (){
     }
   });
 
-  //shopping cart function
-
-  //var numItems = 0;
-
-  // $('.product-wrap button').on('click', function (e) {
-  //     e.preventDefault();
-  //
-  //     numItems++;
-  //     $('.counter').text(numItems);
-  //     $('.counter').show();
-  //
-  //
-  // });
-
-
   // smooth scrolling function, taking into account the fixed header
 
   //$target.offset().top - height of header
