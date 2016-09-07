@@ -72,7 +72,6 @@ body {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
   font-family: "playfair_display";
 }
@@ -80,7 +79,6 @@ body {
 body, button, input, select, textarea {
   color: #3B3738;
   font-family: 'arial', sans-serif;
-  font-size: 14px;
   font-style: normal;
   font-weight: normal;
   line-height: 2;
@@ -127,9 +125,9 @@ header {
   top: 0;
   width: 100%;
   z-index: 100;
-  background-color: white;
+  background-color: hsla(0,0%,100%,.9);
   border-bottom: 1px solid #d7d7d7;
-  box-shadow: 0px 1px 6px rgba(100, 100, 100, 0.15);
+  /*box-shadow: 0px 1px 6px rgba(100, 100, 100, 0.15);*/
 }
 
 .reader {
@@ -206,6 +204,7 @@ nav {
 .main-navigate {
   border-top: 1px solid #d7d7d7;
   padding-top: .5rem;
+  font-weight: 100;
 }
 
 .main-navigate ul {
@@ -216,7 +215,6 @@ nav {
 }
 
 .main-navigate li {
-  font-weight: bold;
   margin: 0 1rem;
   text-transform: uppercase;
 }
@@ -265,7 +263,6 @@ nav {
 /*--- This is for ther refer (about) ---*/
 
 .refer {
-  border-bottom: 1px solid #d7d7d7;
   text-align: center;
 }
 
@@ -274,8 +271,7 @@ nav {
   text-align: center;
   /*padding: 75px 0;*/
 }
-.can {
-  padding: 0 2%;
+.contain {
   margin: 0 auto;
   width: 100%;
 }
@@ -498,7 +494,7 @@ input[type="submit"]:hover, input[type="submit"]:focus {
 /* Sections */
 
 section {
-  padding: 4rem 0;
+  padding: 3rem 0;
 }
 
 section h2 {
@@ -537,8 +533,9 @@ section h2 {
 /* Footer */
 
 .container1 {
+  /*padding: 0 2%;*/
   margin: 0 auto;
-  width: 100%;
+  max-width: 90%;
   /*text-align: left;
   padding: 0 2rem;*/
 }
@@ -598,8 +595,9 @@ margin-bottom: 1rem;
 
 .network-name {
   display: none;
-  font-size: 20px;
+  /*font-size: 20px;*/
   line-height: 1.5;
+  font-family: 'Raleway', sans-serif
 }
 footer ul{
   width: auto;
@@ -613,6 +611,11 @@ footer ul{
 /******************************************/
 
 @media screen and (min-width: 600px) {
+
+  html {
+    font-size: 16px;
+  }
+
   .outer-rectangle {
     flex: 0 1 50%;
   }
@@ -668,6 +671,7 @@ footer ul{
     font-size: 14px;
   }
 
+
   .network-name {
     display: inline;
   }
@@ -696,7 +700,6 @@ footer ul{
    display: flex;
    justify-content: center;
    width: 100%;
-   background-color: white;
  }
 
  .standard{
@@ -751,14 +754,9 @@ footer ul{
  .refer-text {
    width: 720px;
  }
- .can {
+ .contain {
    width: 720px;
  }
-
- .clearfix {
-   max-width: 1240px;
- }
-
  .social {
    padding-right: 4rem;
  }
