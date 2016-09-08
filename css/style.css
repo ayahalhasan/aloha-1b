@@ -77,11 +77,11 @@ body {
 }
 
 body, button, input, select, textarea {
-  color: #3B3738;
   font-family: 'arial', sans-serif;
   font-style: normal;
   font-weight: normal;
   line-height: 2;
+  color: #3B3738;
 }
 
 h1, h2, h3 {
@@ -156,7 +156,7 @@ header {
 .counter {
   display: none;
   width: 20px;
-  height: 20px;
+  height: 18px;
   top: 8px;
   right: 8px;
   padding-top: 4px;
@@ -438,6 +438,7 @@ input[type="email"]:focus, input[type="submit"]:focus {
 input[type="email"] {
   padding: .5rem .3rem .5rem 1.75rem;
   width: 100%;
+  font-size: 1rem;
 }
 
 input[type="email"]:focus {
@@ -453,6 +454,7 @@ input[type="submit"] {
   position: absolute;
   right: -1.75rem;
   top: .25rem;
+  font-size: 1rem;
 }
 
 input[type="submit"]:hover, input[type="submit"]:focus {
@@ -494,7 +496,7 @@ input[type="submit"]:hover, input[type="submit"]:focus {
 /* Sections */
 
 section {
-  padding: 3rem 0;
+  padding: 4rem 0;
 }
 
 section h2 {
@@ -654,7 +656,7 @@ footer ul{
   .counter{
     font-size: .8rem;
     padding-top: 3px;
-    right: -3px;
+    /*right: -3px;*/
     top: -3px;
   }
 
@@ -737,7 +739,6 @@ footer ul{
  }
 
  .counter {
-   top: 7px;
    right: 13px;
  }
 

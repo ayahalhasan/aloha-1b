@@ -24,17 +24,20 @@ $(document).ready(function(){
       }
     });
 
-    // smooth scrolling function
-    $('a[href^="#"]').on('click',function (e) {
-	     e.preventDefault();
+    // Smooth scrolling function
+    $('a[href*="#"]:not([href="#"])').click(function(e) {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 800);
+          return false;
+        }
+      }
+    });
 
-	     var $target = $(this.hash);
-
-	     $('html, body').stop().animate(
-          {
-	         'scrollTop': $target.offset() .top - ($('header').height())
-          },
-          900, 'swing');
-	     });
   });
+
 });
